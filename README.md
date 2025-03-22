@@ -19,6 +19,8 @@ Further down, I include instructions for having the data get picked up by [Home 
    - ECHO to GPIO 2
 
    [![Wiring Diagram](./images/Sketch.png)](./images/Sketch.png)
+1. The breadboard is only to help show the connections.  You can connect the wires directly to the devices so it can be packaged together.
+1. Attach the HC-SR04 ultrasonic sensor to the pipe where you want to detect water flow.  Make sure the sensor is facing downwards and is securely attached to the pipe.  You can use zip ties or other fasteners to hold it in place.
 
 ### Software Setup
 1. Clone this repository to your local machine.
