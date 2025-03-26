@@ -43,6 +43,10 @@ Further down, I include instructions for having the data get picked up by [Home 
 4. The device will also display the water flow status on the OLED screen.
 5. When a message is sent successfully, the built in LED will blink once.
 
+## 3D Printing the Case
+1. The case is designed to fit the Heltec ESP32 Lora V2 and the HC-SR04 ultrasonic sensor.  Once assembled, you can attach it to the pipe using zip ties or other fasteners.
+1. The case is designed to be printed in two parts: the [base](/3dFiles/bottom.stl) and the [lid](/3dFiles/top.stl).  The base has holes for the ultrasonic sensor and the OLED screen, while the lid has a hole for the screen.  You can print the case using any 3D printer and filament of your choice.
+
 ## Home Assistant Setup
 
 1. [Home Assistant](https://www.home-assistant.io/) installed on a Raspberry Pi or other device.
