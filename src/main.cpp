@@ -62,7 +62,7 @@ void loop() {
   if ((currentState != previousState) || !initialMessageSent) {
     initialMessageSent = true; // Mark the initial message as sent
     // Create a JSON message with the water flow status
-    String jsonMessage = "{\"WaterFlow\": " + String(currentState ? "true" : "false") + "}";
+    String jsonMessage = "{\"WaterFlow\": " + String(currentState ? "1" : "0") + "}";
     Serial.println("Sending message to MQTT: " + jsonMessage);
     sendMessageToMQTT(MQTT_TOPIC, jsonMessage.c_str()); // Send the message to the MQTT broker
   }

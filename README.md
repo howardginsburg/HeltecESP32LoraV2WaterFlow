@@ -34,10 +34,10 @@ Further down, I include instructions for having the data get picked up by [Home 
 
 1. When the device connects to Wifi, it will display the SSID and IP address on the OLED screen.
 2. When every X seconds, the data from the ultrasonic sensor will be read.  When water is detected, the value will be greater than 0.
-3. If it detects a change in the water flow, it will send the data to the MQTT broker.  The data will be sent in JSON format with the following structure:
+3. If it detects a change in the water flow, it will send the data to the MQTT broker.  The data will be sent in JSON format with true=1 and false=0 in the following structure:
 ```json
 {
-  "WaterFlow": true/false
+  "WaterFlow": 1
 }
 ```
 4. The device will also display the water flow status on the OLED screen.
@@ -58,5 +58,6 @@ mqtt:
   sensor:
     - name: "Water Flow"
       state_topic: "WaterFlow"
+      state_class: measurement
       value_template: "{{ value_json.WaterFlow }}"
 ```
